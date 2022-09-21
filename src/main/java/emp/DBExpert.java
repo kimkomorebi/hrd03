@@ -96,7 +96,7 @@ public class DBExpert {
 		Connection con = null; PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			Class.forName(uri);
+			Class.forName(driver);
 			con = DriverManager.getConnection(uri,"hr","hr");
 			pstmt = con.prepareStatement(select);
 			pstmt.setString(1, name);
